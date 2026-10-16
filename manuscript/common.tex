@@ -1,0 +1,15 @@
+% Shared preamble for both layouts. The wrapper must define \gendir (path to generated/).
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{fancyvrb}
+\usepackage{url}
+
+% Highlighted box for work still to be done before submission.
+\newcommand{\pending}[2][Pending]{\par\smallskip\noindent\colorbox{orange!20}{\parbox{\dimexpr\linewidth-2\fboxsep}{\small\textbf{[#1]} #2}}\par\smallskip}
+\newcommand{\term}[1]{\textit{#1}}
+
+\input{\gendir/macros.tex}

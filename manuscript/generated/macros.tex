@@ -1,0 +1,432 @@
+\newcommand{\KWfullP}{40.4\%}
+\newcommand{\KWfullR}{32.0\%}
+\newcommand{\KWfullF}{35.7\%}
+\newcommand{\KWfullFPR}{36.9\%}
+\newcommand{\KWfullCone}{63.3\%}
+\newcommand{\KWfullCtwo}{3.3\%}
+\newcommand{\KWfullCthree}{51.4\%}
+\newcommand{\KWfullCfour}{6.7\%}
+\newcommand{\KWfullNone}{6.7\%}
+\newcommand{\KWfullNtwo}{0.0\%}
+\newcommand{\KWfullNthree}{30.0\%}
+\newcommand{\KWfullNfour}{82.9\%}
+\newcommand{\KWfullNfive}{54.3\%}
+\newcommand{\KWgenP}{43.8\%}
+\newcommand{\KWgenR}{22.4\%}
+\newcommand{\KWgenF}{29.6\%}
+\newcommand{\KWgenFPR}{22.5\%}
+\newcommand{\KWgenCone}{63.3\%}
+\newcommand{\KWgenCtwo}{0.0\%}
+\newcommand{\KWgenCthree}{25.7\%}
+\newcommand{\KWgenCfour}{0.0\%}
+\newcommand{\KWgenNone}{6.7\%}
+\newcommand{\KWgenNtwo}{0.0\%}
+\newcommand{\KWgenNthree}{16.7\%}
+\newcommand{\KWgenNfour}{62.9\%}
+\newcommand{\KWgenNfive}{20.0\%}
+\newcommand{\KWcritP}{93.8\%}
+\newcommand{\KWcritR}{12.0\%}
+\newcommand{\KWcritF}{21.3\%}
+\newcommand{\KWcritFPR}{0.6\%}
+\newcommand{\KWcritCone}{23.3\%}
+\newcommand{\KWcritCtwo}{0.0\%}
+\newcommand{\KWcritCthree}{22.9\%}
+\newcommand{\KWcritCfour}{0.0\%}
+\newcommand{\KWcritNone}{0.0\%}
+\newcommand{\KWcritNtwo}{0.0\%}
+\newcommand{\KWcritNthree}{0.0\%}
+\newcommand{\KWcritNfour}{2.9\%}
+\newcommand{\KWcritNfive}{0.0\%}
+\newcommand{\Nitems}{285}\newcommand{\Npos}{125}\newcommand{\Nneg}{160}
+\newcommand{\Nlex}{44}\newcommand{\Nlexng}{13}\newcommand{\Ncrit}{11}
+\newcommand{\HaveLLM}{1}
+\makeatletter\newcommand{\res}[3]{\@ifundefined{res@#1@#2@#3}{\textbf{??}}{\csname res@#1@#2@#3\endcsname}}\makeatother
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini-mt2000@P\endcsname{80.0\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini-mt2000@R\endcsname{98.1\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini-mt2000@F\endcsname{88.1\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini-mt2000@FPR\endcsname{19.2\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini-mt2000@Psd\endcsname{0.4\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini-mt2000@Rsd\endcsname{1.2\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini-mt2000@FPRsd\endcsname{0.4\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini-mt2000@C1\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini-mt2000@C2\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini-mt2000@C3\endcsname{98.1\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini-mt2000@C4\endcsname{94.4\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini-mt2000@N1\endcsname{3.3\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini-mt2000@N2\endcsname{53.3\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini-mt2000@N3\endcsname{45.6\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini-mt2000@N4\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini-mt2000@N5\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini-mt2000@P\endcsname{91.3\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini-mt2000@R\endcsname{22.4\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini-mt2000@F\endcsname{36.0\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini-mt2000@FPR\endcsname{1.7\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini-mt2000@Psd\endcsname{1.7\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini-mt2000@Rsd\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini-mt2000@FPRsd\endcsname{0.4\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini-mt2000@C1\endcsname{63.3\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini-mt2000@C2\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini-mt2000@C3\endcsname{25.7\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini-mt2000@C4\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini-mt2000@N1\endcsname{3.3\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini-mt2000@N2\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini-mt2000@N3\endcsname{5.6\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini-mt2000@N4\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini-mt2000@N5\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini-mt2000@P\endcsname{78.5\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini-mt2000@R\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini-mt2000@F\endcsname{87.9\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini-mt2000@FPR\endcsname{21.5\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini-mt2000@Psd\endcsname{2.4\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini-mt2000@Rsd\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini-mt2000@FPRsd\endcsname{3.1\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini-mt2000@C1\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini-mt2000@C2\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini-mt2000@C3\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini-mt2000@C4\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini-mt2000@N1\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini-mt2000@N2\endcsname{46.7\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini-mt2000@N3\endcsname{62.2\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini-mt2000@N4\endcsname{1.0\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini-mt2000@N5\endcsname{3.8\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini-mt2000@P\endcsname{87.0\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini-mt2000@R\endcsname{32.0\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini-mt2000@F\endcsname{46.8\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini-mt2000@FPR\endcsname{3.8\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini-mt2000@Psd\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini-mt2000@Rsd\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini-mt2000@FPRsd\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini-mt2000@C1\endcsname{63.3\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini-mt2000@C2\endcsname{3.3\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini-mt2000@C3\endcsname{51.4\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini-mt2000@C4\endcsname{6.7\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini-mt2000@N1\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini-mt2000@N2\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini-mt2000@N3\endcsname{15.6\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini-mt2000@N4\endcsname{1.0\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini-mt2000@N5\endcsname{2.9\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini-mt2000@P\endcsname{99.7\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini-mt2000@R\endcsname{98.9\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini-mt2000@F\endcsname{99.3\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini-mt2000@FPR\endcsname{0.2\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini-mt2000@Psd\endcsname{0.5\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini-mt2000@Rsd\endcsname{0.5\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini-mt2000@FPRsd\endcsname{0.4\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini-mt2000@C1\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini-mt2000@C2\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini-mt2000@C3\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini-mt2000@C4\endcsname{95.6\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini-mt2000@N1\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini-mt2000@N2\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini-mt2000@N3\endcsname{1.1\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini-mt2000@N4\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini-mt2000@N5\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini-mt2000@P\endcsname{78.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini-mt2000@R\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini-mt2000@F\endcsname{87.6\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini-mt2000@FPR\endcsname{22.1\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini-mt2000@Psd\endcsname{2.4\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini-mt2000@Rsd\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini-mt2000@FPRsd\endcsname{3.1\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini-mt2000@C1\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini-mt2000@C2\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini-mt2000@C3\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini-mt2000@C4\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini-mt2000@N1\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini-mt2000@N2\endcsname{46.7\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini-mt2000@N3\endcsname{62.2\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini-mt2000@N4\endcsname{3.8\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini-mt2000@N5\endcsname{3.8\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini-mt2000@P\endcsname{98.9\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini-mt2000@R\endcsname{98.9\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini-mt2000@F\endcsname{98.9\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini-mt2000@FPR\endcsname{0.8\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini-mt2000@Psd\endcsname{0.5\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini-mt2000@Rsd\endcsname{0.5\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini-mt2000@FPRsd\endcsname{0.4\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini-mt2000@C1\endcsname{100.0\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini-mt2000@C2\endcsname{100.0\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini-mt2000@C3\endcsname{100.0\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini-mt2000@C4\endcsname{95.6\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini-mt2000@N1\endcsname{0.0\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini-mt2000@N2\endcsname{0.0\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini-mt2000@N3\endcsname{1.1\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini-mt2000@N4\endcsname{2.9\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini-mt2000@N5\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini@P\endcsname{94.7\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini@R\endcsname{46.7\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini@F\endcsname{62.5\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini@FPR\endcsname{2.1\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini@Psd\endcsname{3.3\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini@Rsd\endcsname{1.7\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini@FPRsd\endcsname{1.4\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini@C1\endcsname{72.2\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini@C2\endcsname{54.4\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini@C3\endcsname{42.9\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini@C4\endcsname{17.8\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini@N1\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini@N2\endcsname{6.7\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini@N3\endcsname{4.4\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini@N4\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5-mini@N5\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini@P\endcsname{96.8\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini@R\endcsname{16.5\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini@F\endcsname{28.2\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini@FPR\endcsname{0.4\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini@Psd\endcsname{2.8\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini@Rsd\endcsname{1.2\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini@FPRsd\endcsname{0.4\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini@C1\endcsname{50.0\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini@C2\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini@C3\endcsname{16.2\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini@C4\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini@N1\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini@N2\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini@N3\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini@N4\endcsname{1.9\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5-mini@N5\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini@P\endcsname{93.4\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini@R\endcsname{67.7\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini@F\endcsname{78.5\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini@FPR\endcsname{3.8\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini@Psd\endcsname{2.2\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini@Rsd\endcsname{1.8\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini@FPRsd\endcsname{1.2\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini@C1\endcsname{86.7\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini@C2\endcsname{62.2\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini@C3\endcsname{73.3\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini@C4\endcsname{47.8\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini@N1\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini@N2\endcsname{13.3\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini@N3\endcsname{6.7\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini@N4\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NG@gpt-5-mini@N5\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini@P\endcsname{96.3\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini@R\endcsname{28.0\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini@F\endcsname{43.4\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini@FPR\endcsname{0.8\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini@Psd\endcsname{3.2\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini@Rsd\endcsname{2.1\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini@FPRsd\endcsname{0.7\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini@C1\endcsname{57.8\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini@C2\endcsname{3.3\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini@C3\endcsname{45.7\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini@C4\endcsname{2.2\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini@N1\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini@N2\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini@N3\endcsname{2.2\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini@N4\endcsname{1.9\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5-mini@N5\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini@P\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini@R\endcsname{67.7\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini@F\endcsname{80.8\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini@FPR\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini@Psd\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini@Rsd\endcsname{1.8\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini@FPRsd\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini@C1\endcsname{86.7\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini@C2\endcsname{62.2\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini@C3\endcsname{73.3\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini@C4\endcsname{47.8\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini@N1\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini@N2\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini@N3\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini@N4\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5-mini@N5\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini@P\endcsname{92.6\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini@R\endcsname{70.4\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini@F\endcsname{80.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini@FPR\endcsname{4.4\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini@Psd\endcsname{2.1\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini@Rsd\endcsname{1.4\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini@FPRsd\endcsname{1.2\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini@C1\endcsname{90.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini@C2\endcsname{62.2\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini@C3\endcsname{80.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini@C4\endcsname{47.8\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini@N1\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini@N2\endcsname{13.3\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini@N3\endcsname{6.7\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini@N4\endcsname{2.9\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5-mini@N5\endcsname{0.0\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini@P\endcsname{98.9\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini@R\endcsname{70.4\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini@F\endcsname{82.2\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini@FPR\endcsname{0.6\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini@Psd\endcsname{0.0\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini@Rsd\endcsname{1.4\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini@FPRsd\endcsname{0.0\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini@C1\endcsname{90.0\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini@C2\endcsname{62.2\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini@C3\endcsname{80.0\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini@C4\endcsname{47.8\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini@N1\endcsname{0.0\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini@N2\endcsname{0.0\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini@N3\endcsname{0.0\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini@N4\endcsname{2.9\%}
+\expandafter\def\csname res@Recommended@gpt-5-mini@N5\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5.1@P\endcsname{85.7\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5.1@R\endcsname{99.2\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5.1@F\endcsname{92.0\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5.1@FPR\endcsname{12.9\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5.1@Psd\endcsname{0.9\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5.1@Rsd\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5.1@FPRsd\endcsname{1.0\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5.1@C1\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5.1@C2\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5.1@C3\endcsname{97.1\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5.1@C4\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5.1@N1\endcsname{3.3\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5.1@N2\endcsname{37.8\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5.1@N3\endcsname{27.8\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5.1@N4\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-GEN@gpt-5.1@N5\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5.1@P\endcsname{93.3\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5.1@R\endcsname{22.4\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5.1@F\endcsname{36.1\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5.1@FPR\endcsname{1.2\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5.1@Psd\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5.1@Rsd\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5.1@FPRsd\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5.1@C1\endcsname{63.3\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5.1@C2\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5.1@C3\endcsname{25.7\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5.1@C4\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5.1@N1\endcsname{3.3\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5.1@N2\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5.1@N3\endcsname{3.3\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5.1@N4\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-generic@gpt-5.1@N5\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NG@gpt-5.1@P\endcsname{81.5\%}
+\expandafter\def\csname res@LLM-NG@gpt-5.1@R\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NG@gpt-5.1@F\endcsname{89.8\%}
+\expandafter\def\csname res@LLM-NG@gpt-5.1@FPR\endcsname{17.7\%}
+\expandafter\def\csname res@LLM-NG@gpt-5.1@Psd\endcsname{0.3\%}
+\expandafter\def\csname res@LLM-NG@gpt-5.1@Rsd\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NG@gpt-5.1@FPRsd\endcsname{0.4\%}
+\expandafter\def\csname res@LLM-NG@gpt-5.1@C1\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NG@gpt-5.1@C2\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NG@gpt-5.1@C3\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NG@gpt-5.1@C4\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NG@gpt-5.1@N1\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NG@gpt-5.1@N2\endcsname{44.4\%}
+\expandafter\def\csname res@LLM-NG@gpt-5.1@N3\endcsname{50.0\%}
+\expandafter\def\csname res@LLM-NG@gpt-5.1@N4\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NG@gpt-5.1@N5\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5.1@P\endcsname{93.8\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5.1@R\endcsname{32.0\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5.1@F\endcsname{47.7\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5.1@FPR\endcsname{1.7\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5.1@Psd\endcsname{1.3\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5.1@Rsd\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5.1@FPRsd\endcsname{0.4\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5.1@C1\endcsname{63.3\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5.1@C2\endcsname{3.3\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5.1@C3\endcsname{51.4\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5.1@C4\endcsname{6.7\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5.1@N1\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5.1@N2\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5.1@N3\endcsname{8.9\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5.1@N4\endcsname{0.0\%}
+\expandafter\def\csname res@Hybrid-deployed@gpt-5.1@N5\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5.1@P\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5.1@R\endcsname{97.3\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5.1@F\endcsname{98.6\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5.1@FPR\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5.1@Psd\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5.1@Rsd\endcsname{0.5\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5.1@FPRsd\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5.1@C1\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5.1@C2\endcsname{96.7\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5.1@C3\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5.1@C4\endcsname{92.2\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5.1@N1\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5.1@N2\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5.1@N3\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5.1@N4\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGsevgeHIGH@gpt-5.1@N5\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5.1@P\endcsname{81.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5.1@R\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5.1@F\endcsname{89.5\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5.1@FPR\endcsname{18.3\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5.1@Psd\endcsname{0.3\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5.1@Rsd\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5.1@FPRsd\endcsname{0.4\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5.1@C1\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5.1@C2\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5.1@C3\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5.1@C4\endcsname{100.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5.1@N1\endcsname{0.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5.1@N2\endcsname{44.4\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5.1@N3\endcsname{50.0\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5.1@N4\endcsname{2.9\%}
+\expandafter\def\csname res@LLM-NGORcritical@gpt-5.1@N5\endcsname{0.0\%}
+\expandafter\def\csname res@Recommended@gpt-5.1@P\endcsname{99.2\%}
+\expandafter\def\csname res@Recommended@gpt-5.1@R\endcsname{97.3\%}
+\expandafter\def\csname res@Recommended@gpt-5.1@F\endcsname{98.2\%}
+\expandafter\def\csname res@Recommended@gpt-5.1@FPR\endcsname{0.6\%}
+\expandafter\def\csname res@Recommended@gpt-5.1@Psd\endcsname{0.0\%}
+\expandafter\def\csname res@Recommended@gpt-5.1@Rsd\endcsname{0.5\%}
+\expandafter\def\csname res@Recommended@gpt-5.1@FPRsd\endcsname{0.0\%}
+\expandafter\def\csname res@Recommended@gpt-5.1@C1\endcsname{100.0\%}
+\expandafter\def\csname res@Recommended@gpt-5.1@C2\endcsname{96.7\%}
+\expandafter\def\csname res@Recommended@gpt-5.1@C3\endcsname{100.0\%}
+\expandafter\def\csname res@Recommended@gpt-5.1@C4\endcsname{92.2\%}
+\expandafter\def\csname res@Recommended@gpt-5.1@N1\endcsname{0.0\%}
+\expandafter\def\csname res@Recommended@gpt-5.1@N2\endcsname{0.0\%}
+\expandafter\def\csname res@Recommended@gpt-5.1@N3\endcsname{0.0\%}
+\expandafter\def\csname res@Recommended@gpt-5.1@N4\endcsname{2.9\%}
+\expandafter\def\csname res@Recommended@gpt-5.1@N5\endcsname{0.0\%}
+\expandafter\def\csname mcn@Hybrid-deployed@LLM-NG@gpt-5-mini\endcsname{$p<0.001$}
+\expandafter\def\csname mcn@LLM-NG@LLM-GEN@gpt-5-mini\endcsname{$p=0.007$}
+\expandafter\def\csname mcn@Hybrid-deployed@Hybrid-generic@gpt-5-mini\endcsname{$p=0.077$}
+\expandafter\def\csname mcn@Recommended@Hybrid-deployed@gpt-5-mini\endcsname{$p<0.001$}
+\expandafter\def\csname mcn@Recommended@LLM-NG@gpt-5-mini\endcsname{$p=0.003$}
+\expandafter\def\csname mcn@Hybrid-deployed@LLM-NG@gpt-5-mini-mt2000\endcsname{$p<0.001$}
+\expandafter\def\csname mcn@LLM-NG@LLM-GEN@gpt-5-mini-mt2000\endcsname{$p=0.690$}
+\expandafter\def\csname mcn@Hybrid-deployed@Hybrid-generic@gpt-5-mini-mt2000\endcsname{$p=0.049$}
+\expandafter\def\csname mcn@Recommended@Hybrid-deployed@gpt-5-mini-mt2000\endcsname{$p<0.001$}
+\expandafter\def\csname mcn@Recommended@LLM-NG@gpt-5-mini-mt2000\endcsname{$p<0.001$}
+\expandafter\def\csname mcn@Hybrid-deployed@LLM-NG@gpt-5.1\endcsname{$p<0.001$}
+\expandafter\def\csname mcn@LLM-NG@LLM-GEN@gpt-5.1\endcsname{$p=0.146$}
+\expandafter\def\csname mcn@Hybrid-deployed@Hybrid-generic@gpt-5.1\endcsname{$p=0.007$}
+\expandafter\def\csname mcn@Recommended@Hybrid-deployed@gpt-5.1\endcsname{$p<0.001$}
+\expandafter\def\csname mcn@Recommended@LLM-NG@gpt-5.1\endcsname{$p<0.001$}
+\makeatletter\newcommand{\mcn}[3]{\@ifundefined{mcn@#1@#2@#3}{\textbf{??}}{\csname mcn@#1@#2@#3\endcsname}}\makeatother
+\expandafter\def\csname lat@gpt-5-mini-mt2000@generic@med\endcsname{3.38}
+\expandafter\def\csname lat@gpt-5-mini-mt2000@generic@p95\endcsname{5.51}
+\expandafter\def\csname lat@gpt-5-mini-mt2000@generic@fail\endcsname{0}
+\expandafter\def\csname lat@gpt-5-mini-mt2000@generic@failpct\endcsname{0.0\%}
+\expandafter\def\csname lat@gpt-5-mini-mt2000@generic@emptypct\endcsname{0.0\%}
+\expandafter\def\csname lat@gpt-5-mini-mt2000@generic@runs\endcsname{3}
+\expandafter\def\csname lat@gpt-5-mini-mt2000@ng@med\endcsname{3.24}
+\expandafter\def\csname lat@gpt-5-mini-mt2000@ng@p95\endcsname{4.99}
+\expandafter\def\csname lat@gpt-5-mini-mt2000@ng@fail\endcsname{0}
+\expandafter\def\csname lat@gpt-5-mini-mt2000@ng@failpct\endcsname{0.0\%}
+\expandafter\def\csname lat@gpt-5-mini-mt2000@ng@emptypct\endcsname{0.0\%}
+\expandafter\def\csname lat@gpt-5-mini-mt2000@ng@runs\endcsname{3}
+\expandafter\def\csname lat@gpt-5-mini@generic@med\endcsname{2.98}
+\expandafter\def\csname lat@gpt-5-mini@generic@p95\endcsname{3.60}
+\expandafter\def\csname lat@gpt-5-mini@generic@fail\endcsname{570}
+\expandafter\def\csname lat@gpt-5-mini@generic@failpct\endcsname{66.7\%}
+\expandafter\def\csname lat@gpt-5-mini@generic@emptypct\endcsname{65.3\%}
+\expandafter\def\csname lat@gpt-5-mini@generic@runs\endcsname{3}
+\expandafter\def\csname lat@gpt-5-mini@ng@med\endcsname{2.98}
+\expandafter\def\csname lat@gpt-5-mini@ng@p95\endcsname{3.85}
+\expandafter\def\csname lat@gpt-5-mini@ng@fail\endcsname{464}
+\expandafter\def\csname lat@gpt-5-mini@ng@failpct\endcsname{54.3\%}
+\expandafter\def\csname lat@gpt-5-mini@ng@emptypct\endcsname{51.9\%}
+\expandafter\def\csname lat@gpt-5-mini@ng@runs\endcsname{3}
+\expandafter\def\csname lat@gpt-5.1@generic@med\endcsname{1.26}
+\expandafter\def\csname lat@gpt-5.1@generic@p95\endcsname{1.78}
+\expandafter\def\csname lat@gpt-5.1@generic@fail\endcsname{0}
+\expandafter\def\csname lat@gpt-5.1@generic@failpct\endcsname{0.0\%}
+\expandafter\def\csname lat@gpt-5.1@generic@emptypct\endcsname{0.0\%}
+\expandafter\def\csname lat@gpt-5.1@generic@runs\endcsname{3}
+\expandafter\def\csname lat@gpt-5.1@ng@med\endcsname{1.30}
+\expandafter\def\csname lat@gpt-5.1@ng@p95\endcsname{2.04}
+\expandafter\def\csname lat@gpt-5.1@ng@fail\endcsname{0}
+\expandafter\def\csname lat@gpt-5.1@ng@failpct\endcsname{0.0\%}
+\expandafter\def\csname lat@gpt-5.1@ng@emptypct\endcsname{0.0\%}
+\expandafter\def\csname lat@gpt-5.1@ng@runs\endcsname{3}
+\makeatletter\newcommand{\lat}[3]{\@ifundefined{lat@#1@#2@#3}{\textbf{??}}{\csname lat@#1@#2@#3\endcsname}}\makeatother

@@ -1,0 +1,65 @@
+\begin{table*}[t]\centering\small
+\caption{Detection performance on NaijaCrisis-285 (125 crisis, 160 non-crisis messages). Values are means over repeated runs (\,$\pm$\,SD); brackets give 95\% bootstrap CIs (run~1). FPR = false-positive rate.}
+\label{tab:main}
+\begin{tabular}{lcccc}\toprule
+Detector & Precision & Recall & F1 & FPR \\\midrule
+KW-full & 40.4 & 32.0 {\scriptsize[23.9--40.0]} & 35.7 & 36.9 \\
+KW-generic & 43.8 & 22.4 {\scriptsize[15.3--30.1]} & 29.6 & 22.5 \\
+KW-critical & 93.8 & 12.0 {\scriptsize[6.6--18.2]} & 21.3 & 0.6 \\
+\midrule\multicolumn{5}{l}{\textit{\texttt{gpt-5.1} (deployed model)}}\\
+Hybrid-deployed & 93.8\,$\pm$\,1.3 & 32.0\,$\pm$\,0.0 {\scriptsize[23.9--40.0]} & 47.7\,$\pm$\,0.2 & 1.7\,$\pm$\,0.4 \\
+Hybrid-generic & 93.3\,$\pm$\,0.0 & 22.4\,$\pm$\,0.0 {\scriptsize[15.3--30.1]} & 36.1\,$\pm$\,0.0 & 1.2\,$\pm$\,0.0 \\
+LLM-NG & 81.5\,$\pm$\,0.3 & 100.0\,$\pm$\,0.0 {\scriptsize[100.0--100.0]} & 89.8\,$\pm$\,0.2 & 17.7\,$\pm$\,0.4 \\
+LLM-GEN & 85.7\,$\pm$\,0.9 & 99.2\,$\pm$\,0.0 {\scriptsize[97.4--100.0]} & 92.0\,$\pm$\,0.5 & 12.9\,$\pm$\,1.0 \\
+LLM-NG, sev$\geq$HIGH & 100.0\,$\pm$\,0.0 & 97.3\,$\pm$\,0.5 {\scriptsize[93.1--99.3]} & 98.6\,$\pm$\,0.2 & 0.0\,$\pm$\,0.0 \\
+LLM-NG $\lor$ critical & 81.0\,$\pm$\,0.3 & 100.0\,$\pm$\,0.0 {\scriptsize[100.0--100.0]} & 89.5\,$\pm$\,0.2 & 18.3\,$\pm$\,0.4 \\
+Recommended & 99.2\,$\pm$\,0.0 & 97.3\,$\pm$\,0.5 {\scriptsize[93.1--99.3]} & 98.2\,$\pm$\,0.2 & 0.6\,$\pm$\,0.0 \\
+\midrule\multicolumn{5}{l}{\textit{\texttt{gpt-5-mini}, 2{,}000-token budget (control)}}\\
+Hybrid-deployed & 87.0\,$\pm$\,0.0 & 32.0\,$\pm$\,0.0 {\scriptsize[23.9--40.0]} & 46.8\,$\pm$\,0.0 & 3.8\,$\pm$\,0.0 \\
+Hybrid-generic & 91.3\,$\pm$\,1.7 & 22.4\,$\pm$\,0.0 {\scriptsize[15.3--30.1]} & 36.0\,$\pm$\,0.1 & 1.7\,$\pm$\,0.4 \\
+LLM-NG & 78.5\,$\pm$\,2.4 & 100.0\,$\pm$\,0.0 {\scriptsize[100.0--100.0]} & 87.9\,$\pm$\,1.5 & 21.5\,$\pm$\,3.1 \\
+LLM-GEN & 80.0\,$\pm$\,0.4 & 98.1\,$\pm$\,1.2 {\scriptsize[93.4--99.3]} & 88.1\,$\pm$\,0.7 & 19.2\,$\pm$\,0.4 \\
+LLM-NG, sev$\geq$HIGH & 99.7\,$\pm$\,0.5 & 98.9\,$\pm$\,0.5 {\scriptsize[97.4--100.0]} & 99.3\,$\pm$\,0.2 & 0.2\,$\pm$\,0.4 \\
+LLM-NG $\lor$ critical & 78.0\,$\pm$\,2.4 & 100.0\,$\pm$\,0.0 {\scriptsize[100.0--100.0]} & 87.6\,$\pm$\,1.5 & 22.1\,$\pm$\,3.1 \\
+Recommended & 98.9\,$\pm$\,0.5 & 98.9\,$\pm$\,0.5 {\scriptsize[97.4--100.0]} & 98.9\,$\pm$\,0.2 & 0.8\,$\pm$\,0.4 \\
+\midrule\multicolumn{5}{l}{\textit{\texttt{gpt-5-mini}, production 300-token budget}}\\
+Hybrid-deployed & 96.3\,$\pm$\,3.2 & 28.0\,$\pm$\,2.1 {\scriptsize[18.1--33.3]} & 43.4\,$\pm$\,2.8 & 0.8\,$\pm$\,0.7 \\
+Hybrid-generic & 96.8\,$\pm$\,2.8 & 16.5\,$\pm$\,1.2 {\scriptsize[11.3--24.4]} & 28.2\,$\pm$\,1.9 & 0.4\,$\pm$\,0.4 \\
+LLM-NG & 93.4\,$\pm$\,2.2 & 67.7\,$\pm$\,1.8 {\scriptsize[57.1--73.8]} & 78.5\,$\pm$\,2.0 & 3.8\,$\pm$\,1.2 \\
+LLM-GEN & 94.7\,$\pm$\,3.3 & 46.7\,$\pm$\,1.7 {\scriptsize[38.8--57.0]} & 62.5\,$\pm$\,1.2 & 2.1\,$\pm$\,1.4 \\
+LLM-NG, sev$\geq$HIGH & 100.0\,$\pm$\,0.0 & 67.7\,$\pm$\,1.8 {\scriptsize[57.1--73.8]} & 80.8\,$\pm$\,1.3 & 0.0\,$\pm$\,0.0 \\
+LLM-NG $\lor$ critical & 92.6\,$\pm$\,2.1 & 70.4\,$\pm$\,1.4 {\scriptsize[60.6--76.9]} & 80.0\,$\pm$\,1.6 & 4.4\,$\pm$\,1.2 \\
+Recommended & 98.9\,$\pm$\,0.0 & 70.4\,$\pm$\,1.4 {\scriptsize[60.6--76.9]} & 82.2\,$\pm$\,1.0 & 0.6\,$\pm$\,0.0 \\
+\bottomrule\end{tabular}\end{table*}
+
+\begin{table*}[t]\centering\small
+\caption{Rate of crisis predictions per category (\%), keyword baselines and the deployed model (\texttt{gpt-5.1}). For crisis categories (C1--C4) this is recall; for non-crisis categories (N1--N5) it is the false-positive rate, so higher is better on the left and lower is better on the right.}
+\label{tab:percat}
+\begin{tabular}{lcccc|ccccc}\toprule
+Detector & C1 & C2 & C3 & C4 & N1 & N2 & N3 & N4 & N5 \\\midrule
+KW-full & 63.3 & 3.3 & 51.4 & 6.7 & 6.7 & 0.0 & 30.0 & 82.9 & 54.3 \\
+KW-generic & 63.3 & 0.0 & 25.7 & 0.0 & 6.7 & 0.0 & 16.7 & 62.9 & 20.0 \\
+KW-critical & 23.3 & 0.0 & 22.9 & 0.0 & 0.0 & 0.0 & 0.0 & 2.9 & 0.0 \\
+\midrule
+Hybrid-deployed & 63.3 & 3.3 & 51.4 & 6.7 & 0.0 & 0.0 & 8.9 & 0.0 & 0.0 \\
+Hybrid-generic & 63.3 & 0.0 & 25.7 & 0.0 & 3.3 & 0.0 & 3.3 & 0.0 & 0.0 \\
+LLM-NG & 100.0 & 100.0 & 100.0 & 100.0 & 0.0 & 44.4 & 50.0 & 0.0 & 0.0 \\
+LLM-GEN & 100.0 & 100.0 & 97.1 & 100.0 & 3.3 & 37.8 & 27.8 & 0.0 & 0.0 \\
+LLM-NG, sev$\geq$HIGH & 100.0 & 96.7 & 100.0 & 92.2 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+LLM-NG $\lor$ critical & 100.0 & 100.0 & 100.0 & 100.0 & 0.0 & 44.4 & 50.0 & 2.9 & 0.0 \\
+Recommended & 100.0 & 96.7 & 100.0 & 92.2 & 0.0 & 0.0 & 0.0 & 2.9 & 0.0 \\
+\bottomrule\end{tabular}\end{table*}
+
+\begin{table}[t]\centering\small
+\caption{Operational behaviour of the LLM stage (all runs pooled).}\label{tab:ops}
+\begin{tabular}{llccc}\toprule
+Model & Prompt & Median lat. (s) & P95 lat. (s) & Failed calls (\%) \\\midrule
+\texttt{gpt-5.1} & generic & 1.26 & 1.78 & 0.0 \\
+\texttt{gpt-5.1} & Nigerian & 1.30 & 2.04 & 0.0 \\
+\texttt{gpt-5-mini (2,000 tok.)} & generic & 3.38 & 5.51 & 0.0 \\
+\texttt{gpt-5-mini (2,000 tok.)} & Nigerian & 3.24 & 4.99 & 0.0 \\
+\texttt{gpt-5-mini} & generic & 2.98 & 3.60 & 66.7 \\
+\texttt{gpt-5-mini} & Nigerian & 2.98 & 3.85 & 54.3 \\
+\bottomrule\end{tabular}\end{table}
+
+% McNemar tests (run 1): Hybrid-deployed [gpt-5-mini] vs LLM-NG [gpt-5-mini]: b=11, c=55, p=3.6e-08; LLM-NG [gpt-5-mini] vs LLM-GEN [gpt-5-mini]: b=35, c=15, p=0.0066; Hybrid-deployed [gpt-5-mini] vs Hybrid-generic [gpt-5-mini]: b=12, c=4, p=0.0768; Recommended [gpt-5-mini] vs Hybrid-deployed [gpt-5-mini]: b=55, c=0, p=5.55e-17; Recommended [gpt-5-mini] vs LLM-NG [gpt-5-mini]: b=12, c=1, p=0.00342; Hybrid-deployed [gpt-5-mini-mt2000] vs LLM-NG [gpt-5-mini-mt2000]: b=26, c=85, p=1.7e-08; LLM-NG [gpt-5-mini-mt2000] vs LLM-GEN [gpt-5-mini-mt2000]: b=14, c=11, p=0.69; Hybrid-deployed [gpt-5-mini-mt2000] vs Hybrid-generic [gpt-5-mini-mt2000]: b=13, c=4, p=0.049; Recommended [gpt-5-mini-mt2000] vs Hybrid-deployed [gpt-5-mini-mt2000]: b=90, c=2, p=1.73e-24; Recommended [gpt-5-mini-mt2000] vs LLM-NG [gpt-5-mini-mt2000]: b=31, c=2, p=1.31e-07; Hybrid-deployed [gpt-5.1] vs LLM-NG [gpt-5.1]: b=25, c=85, p=7.83e-09; LLM-NG [gpt-5.1] vs LLM-GEN [gpt-5.1]: b=3, c=9, p=0.146; Hybrid-deployed [gpt-5.1] vs Hybrid-generic [gpt-5.1]: b=13, c=2, p=0.00739; Recommended [gpt-5.1] vs Hybrid-deployed [gpt-5.1]: b=84, c=1, p=4.45e-24; Recommended [gpt-5.1] vs LLM-NG [gpt-5.1]: b=28, c=5, p=6.62e-05

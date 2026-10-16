@@ -1,0 +1,31 @@
+% Preprint layout (arXiv). The text lives in body.tex and appendix.tex, shared with ../acl/main.tex.
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{caption}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[hidelinks]{hyperref}
+
+\newcommand{\gendir}{generated}
+\input{common.tex}
+
+\title{Keyword Gates Fail Silently: Evaluating Culturally Adapted\\Crisis Detection in an LLM-Based Mental Health Chatbot\\for Nigerian Users}
+\author{%
+  Tochukwu John Onuabueke\thanks{Corresponding author: \texttt{[email]}} \and
+  Aisha Mustapha Ahmad\\[4pt]
+  \small Department of Computer Science, Bayero University Kano, Nigeria
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\input{body.tex}
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\input{appendix.tex}
+
+\end{document}

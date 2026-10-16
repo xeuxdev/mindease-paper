@@ -1,0 +1,32 @@
+% ACL-format version (AfricaNLP and other *ACL venues).
+% Shares its text with ../manuscript/main.tex via body.tex / appendix.tex.
+% Remove [review] for the camera-ready (shows authors, drops line numbers).
+\documentclass[11pt]{article}
+\usepackage[review]{acl}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{inconsolata}
+\usepackage{graphicx}
+
+\newcommand{\gendir}{../manuscript/generated}
+\input{../manuscript/common.tex}
+
+\title{Keyword Gates Fail Silently: Evaluating Culturally Adapted Crisis Detection in an LLM-Based Mental Health Chatbot for Nigerian Users}
+
+\author{Tochukwu John Onuabueke \and Aisha Mustapha Ahmad \\
+  Department of Computer Science, Bayero University Kano, Nigeria \\
+  \texttt{tochukwuonuabueke1@gmail.com}}
+
+\begin{document}
+\maketitle
+
+\input{../manuscript/body.tex}
+
+\bibliography{../manuscript/refs}
+
+\input{../manuscript/appendix.tex}
+
+\end{document}
