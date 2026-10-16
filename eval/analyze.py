@@ -172,11 +172,12 @@ COND_ORDER = ["Hybrid-deployed", "Hybrid-generic", "LLM-NG", "LLM-GEN", "LLM-NG,
 
 def model_label(m):
     if m == "gpt-5.1":
-        return r"\texttt{gpt-5.1} (deployed model)"
+        # Typewriter stays upright (Inconsolata has no italic); only the description is italic.
+        return r"\texttt{gpt-5.1} \textit{(deployed model)}"
     if m.endswith("-mt2000"):
-        return r"\texttt{gpt-5-mini}, 2{,}000-token budget (control)"
+        return r"\texttt{gpt-5-mini}\textit{, 2{,}000-token budget (control)}"
     if m == "gpt-5-mini":
-        return r"\texttt{gpt-5-mini}, production 300-token budget"
+        return r"\texttt{gpt-5-mini}\textit{, production 300-token budget}"
     return r"\texttt{" + m + "}"
 
 
@@ -217,7 +218,7 @@ def write_latex(summary, stats, tests):
 
     for model, rows in grouped(summary):
         if model:
-            L.append(r"\midrule\multicolumn{5}{l}{\textit{" + model_label(model) + r"}}\\")
+            L.append(r"\midrule\multicolumn{5}{l}{" + model_label(model) + r"}\\")
         for name, v in rows:
             rec = cell(v, "recall") + r" {\scriptsize[" + pct(v["ci_recall"][0]) + "--" + pct(v["ci_recall"][1]) + "]}"
             L.append(f"{latex_name(name)} & {cell(v, 'precision')} & {rec} & {cell(v, 'f1')} & {cell(v, 'fpr')} \\\\")
@@ -242,10 +243,13 @@ def write_latex(summary, stats, tests):
 
     if stats:
         L.append("")
-        L.append(r"\begin{table}[t]\centering\small")
-        L.append(r"\caption{Operational behaviour of the LLM stage (all runs pooled).}\label{tab:ops}")
-        L.append(r"\begin{tabular}{llccc}\toprule")
-        L.append(r"Model & Prompt & Median lat. (s) & P95 lat. (s) & Failed calls (\%) \\\midrule")
+        # Kept narrow enough for one column of the two-column ACL layout.
+        L.append(r"\begin{table}[t]\centering\small\setlength{\tabcolsep}{4pt}")
+        L.append(r"\caption{Operational behaviour of the LLM stage (all runs pooled). \emph{Budget}: completion-token "
+                 r"limit; \emph{Med.}\ and \emph{P95}: median and 95th-percentile latency in seconds; "
+                 r"\emph{Fail}: calls with no usable verdict (\%).}\label{tab:ops}")
+        L.append(r"\begin{tabular}{lrlrrr}\toprule")
+        L.append(r"Model & Budget & Prompt & Med. & P95 & Fail \\\midrule")
         def okey(kv):
             m = kv[0].split("/")[0]
             return (MODEL_ORDER.index(m) if m in MODEL_ORDER else 99, kv[0])
@@ -255,8 +259,8 @@ def write_latex(summary, stats, tests):
             p95 = lat[int(0.95 * (len(lat) - 1))] / 1000 if lat else float("nan")
             fail = 100 * sum(s["fail"]) / (len(ITEMS) * len(s["fail"]))
             m, pr = k.split("/")
-            mname = "gpt-5-mini (2,000 tok.)" if m.endswith("-mt2000") else m
-            L.append(f"\\texttt{{{mname}}} & {'Nigerian' if pr == 'ng' else 'generic'} & {med:.2f} & {p95:.2f} & {fail:.1f} \\\\")
+            mname, budget = (m[: -len("-mt2000")], "2,000") if m.endswith("-mt2000") else (m, "300")
+            L.append(f"\\texttt{{{mname}}} & {budget} & {'Nigerian' if pr == 'ng' else 'generic'} & {med:.2f} & {p95:.2f} & {fail:.1f} \\\\")
         L.append(r"\bottomrule\end{tabular}\end{table}")
 
     # Key numbers as macros so prose in the paper stays in sync with the data.
