@@ -1,7 +1,7 @@
 % Shared appendix.
 \appendix
-\section{Crisis Classification Prompt}\label{app:prompts}
-The deployed system prompt for the LLM classifier, verbatim. The LLM-GEN ablation removes the phrase ``with expertise in Nigerian nuances and slang'' and the ``Key Nigerian Context'' block.
+\begin{figure*}[t]
+\centering
 \begin{Verbatim}[fontsize=\footnotesize,frame=single]
 You are a crisis detection AI with expertise in Nigerian nuances and slang.
 Analyze the following message and determine if it indicates a mental health
@@ -26,6 +26,12 @@ Key Nigerian Context:
   are effectively suicide/death ideation.
 - "I don tire", "nothing dey work" can imply deep depression/despair.
 \end{Verbatim}
+\caption{The deployed crisis-classification system prompt, verbatim.}
+\label{fig:prompt}
+\end{figure*}
+\section{Crisis Classification Prompt}\label{app:prompts}
+Figure~\ref{fig:prompt} shows the deployed system prompt for the LLM classifier. The LLM-GEN ablation removes the phrase ``with expertise in Nigerian nuances and slang'' and the ``Key Nigerian Context'' block.
+
 
 \section{Keyword Lexicon}
 Deployed lexicon (\Nlex\ terms; Nigerian-specific terms in italics): suicide, suicidal, kill myself, end my life, want to die, better off dead, no reason to live, self-harm, hurt myself, cutting, overdose, jump off, hanging, gun, pills, razor, abuse, violent, emergency, crisis, \textit{drink sniper}, \textit{take sniper}, \textit{sniper}, \textit{gbege}, die, \textit{pai}, \textit{kpeme}, \textit{slump}, take poison, swallow poison, \textit{chop poison}, drink poison, poison, \textit{nothing dey work}, tired of life, no hope, give up, \textit{jump lagoon}, jump bridge, take my life, \textit{end am}, \textit{log out}, \textit{go meet god}, everyone would be better off without me.

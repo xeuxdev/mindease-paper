@@ -8,6 +8,9 @@
 \usepackage[hidelinks]{hyperref}
 
 \newcommand{\repourl}{\url{https://github.com/xeuxdev/mindease-paper}}
+% Put floats that get a page of their own at the top of it, not vertically centred.
+\makeatletter\setlength{\@fptop}{0pt}\setlength{\@dblfptop}{0pt}\makeatother
+
 \newcommand{\gendir}{generated}
 \input{common.tex}
 
